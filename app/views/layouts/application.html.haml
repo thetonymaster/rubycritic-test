@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    = render 'layouts/head'
+  %body
+    %header.header.header-home
+      .header-right
+      .header-left
+      .circle
+    = render 'shared/flash_message'
+    #content
+      .container
+        = yield
+    %footer#footer
+      .container
+        %ul
+          %li= link_to '', 'http://www.crowdint.com', class: 'crowdint-logo'
+          %li.culture-logo

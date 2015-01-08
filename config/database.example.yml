@@ -1,0 +1,21 @@
+defaults: &defaults
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: localhost
+
+development:
+  database: kardex
+  <<: *defaults
+
+test:
+  database: kardex_test
+  <<: *defaults
+
+integration:
+  database: kardex_integration
+  <<: *defaults
+
+production:
+  database: kardex
+  <<: *defaults

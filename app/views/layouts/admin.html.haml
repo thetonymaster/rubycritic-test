@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    = render 'layouts/head'
+  %body
+    #wrapper
+      .header-default
+        = link_to '', admin_users_path, class: 'circle'
+        .header-vertical-line
+        .container
+          = yield :user_details
+      = render 'shared/flash_message'
+      #content
+        .container
+          = yield :actions
+          = yield
+      .push
+    %footer#footer
+      .container
+        %ul
+          %li= link_to '', 'http://www.crowdint.com', class: 'crowdint-logo'
+          %li.culture-logo

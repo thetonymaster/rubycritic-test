@@ -1,0 +1,15 @@
+%footer.admin-footer.badges-footer-separator
+  %p
+    Total
+    - if @users
+      = pluralize(@users.size, 'user')
+      .users-footer-icon
+    - elsif @badges
+      = pluralize(@badges.size, 'badge')
+      .badges-footer-icon
+    - elsif @workshops
+      = pluralize(@workshops.size, 'workshop')
+      .workshops-footer-icon
+    - elsif @presentations
+      = pluralize(@presentations.size, 'show don\'t tell presentation')
+      .show-dont-tells-footer-icon  
