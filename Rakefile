@@ -4,3 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 KardexCrowdintCom::Application.load_tasks
+
+task :critic do
+	sh 'rubycritic app lib'
+end

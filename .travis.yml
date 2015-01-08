@@ -13,4 +13,4 @@ script:
   - 'RAILS_ENV=test bundle exec rake'
 
 after_script:
-  - 'rubycritic app lib'
+  - 'bundle exec rake critic'
