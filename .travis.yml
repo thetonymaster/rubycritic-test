@@ -10,7 +10,5 @@ before_script:
   - "export BAMBOO_API_KEY=API_TOKEN RAILS_ENV=test"
   - "export BAMBOO_SUBDOMAIN=crowdint RAILS_ENV=test"
 script:
-  - 'RAILS_ENV=test bundle exec rake'
-
-after_script:
   - 'bundle exec rake critic'
+  - 'RAILS_ENV=test bundle exec rake'
